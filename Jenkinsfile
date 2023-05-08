@@ -7,6 +7,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'ビルド開始'
+	echo 'テスト'
       }
     }
   }
