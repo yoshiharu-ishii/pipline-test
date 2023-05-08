@@ -1,3 +1,5 @@
+@Library("my_shared_library") _
+
 pipeline {
   agent any
   options {
@@ -6,8 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'ビルド開始'
-	echo 'テスト'
+	      foo()
       }
     }
   }
