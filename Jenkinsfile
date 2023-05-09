@@ -4,6 +4,9 @@ pipeline {
   agent {
      label 'linux'
   }
+  options {
+    retry(5)
+  }
   stages {
     stage('stage1') {
       steps {
@@ -13,10 +16,8 @@ pipeline {
     }
     stage('stage2') {
       steps {
-        retry(5) {
-          sh 'echo stage2'
-          sh 'bash test.sh'
-        }
+        sh 'echo stage2'
+        sh 'bash test.sh'
       }
     }
     stage('stage3') {
