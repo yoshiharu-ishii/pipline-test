@@ -1,3 +1,4 @@
+#!/bin/bash
 timestamp=$(date +%s)
 if [ `expr $timestamp % 2` == 0 ]
 then 

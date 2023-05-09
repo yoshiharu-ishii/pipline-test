@@ -15,7 +15,7 @@ pipeline {
       steps {
         retry(5) {
           sh 'echo stage2'
-          sh './test.sh'
+          sh 'bash test.sh'
         }
       }
     }
