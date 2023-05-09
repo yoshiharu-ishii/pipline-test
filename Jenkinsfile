@@ -13,8 +13,10 @@ pipeline {
     }
     stage('stage2') {
       steps {
-        sh 'echo stage2'
-        sh 'sh test.sh'
+        retry(5) {
+          sh 'echo stage2'
+          sh 'sh test.sh'
+        }
       }
     }
     stage('stage3') {
