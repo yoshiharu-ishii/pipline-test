@@ -1,5 +1,5 @@
 #!/bin/bash
-timestamp=$(data +%s)
+timestamp=$(date +%s)
 if [ `expr $timestamp % 2` == 0]
 then 
   exit 0
